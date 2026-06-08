@@ -106,6 +106,7 @@ k1, k2, k3, k4, k5, k6 = st.columns(6)
 
 total = len(fdf)
 unique_art = fdf['artist'].nunique()
+
 top5_share = fdf['artist'].value_counts().head(5).sum() / total * 100
 collab_rate = fdf['is_collab'].mean() * 100
 explicit_rate = fdf['is_explicit'].mean() * 100
